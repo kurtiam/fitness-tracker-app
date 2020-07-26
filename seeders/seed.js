@@ -1,8 +1,5 @@
-// let  mongoose = require("mongoose");
-
+let mongoose = require("mongoose");
 let Workout = require("../models/workout");
-
-
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', {
 
