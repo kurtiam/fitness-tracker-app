@@ -6,7 +6,7 @@ router.post("/api/workouts", (req, res) => {
   console.log("post")
   Workout.create({})
     .then(dbWorkout => {
-      console.log("data frome post", dbWorkout)
+      console.log("posted", dbWorkout)
       res.json(dbWorkout);
     })
     .catch(err => {
