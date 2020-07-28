@@ -5,9 +5,9 @@ console.log("api routes", Workout)
 router.post("/api/workouts", (req, res) => {
   console.log("post")
   Workout.create({})
-    .then(dbWorkout => {
-      console.log("posted", dbWorkout)
-      res.json(dbWorkout);
+    .then(data => {
+      console.log("posted", data)
+      res.json(data);
     })
     .catch(err => {
       console.log("error", err)
@@ -36,6 +36,7 @@ router.get("/api/workouts", (req, res) => {
     })
     .catch(err => {
       res.json(err);
+
     });
 });
 
